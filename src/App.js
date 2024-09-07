@@ -21,7 +21,7 @@ const App = () => {
       <Routes>
         <Route path="/gameReact" element={<NameInput setName={setName} />} />
         <Route path="/gameReact/home" element={<Home name={name} />} />
-        <Route path="/gameReact/game" element={<Game onTaskSelect={handleTaskSelection} />} />
+        <Route path="/gameReact/game" element={<Game name={name} onTaskSelect={handleTaskSelection} />} />
         <Route path="/gameReact/result" element={<TaskResult selectedTask={selectedTask} />} />
       </Routes>
     </div>

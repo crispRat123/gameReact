@@ -1,8 +1,7 @@
-// Game.js
 import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import '../styles/Game.css';
-import ReactGA from 'react-ga';
+import GoBackButton from './GoBackButton';
 
 const tasks = [
     "What’s the most beautiful thing anyone’s ever done for you?",
@@ -16,30 +15,40 @@ const tasks = [
     "What is your favourite memory of us ?",
     "Share a video of you doing your best dance moves."
 ];
-;
-
 
 const Game = ({ name }) => {
     const [selectedTask, setSelectedTask] = useState(null);
     const navigate = useNavigate();
 
-    const handleTaskSelect = (task, index) => {
+    const handleTaskSelect = async (task, index) => {
         setSelectedTask(task);
         localStorage.setItem('selectedTask', task);
 
-        // Track event with Google Analytics
-        ReactGA.event({
-            category: 'User Interaction',
-            action: 'Task Selected',
-            label: `Task ${index + 1}: ${task}`
-        });
+        try {
+            const response = fetch('https://a17bee94-df12-4c33-8fd4-98535c9683d8.mock.pstmn.io/track-click', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json',
+                },
+                body: JSON.stringify({
+                    name,
+                    task,
+                    taskNumber: index + 1
+                }),
+            });
+
+            const result = response.json();
+            console.log('Response from mock server:', result);
+        } catch (error) {
+            console.error('Error sending task to mock server:', error);
+        }
 
         navigate('/gameReact/result');
     };
 
     return (
         <div className="game">
-            <h2>{name}Choose a task number!</h2>
+            <h2>{name}, choose a task number!</h2>
             <div className="task-options">
                 {tasks.map((task, index) => (
                     <button
@@ -51,9 +60,10 @@ const Game = ({ name }) => {
                         {/* Example icon: */}
                         {/* <i className="fas fa-star"></i> */}
                     </button>
-
                 ))}
             </div>
+
+            <GoBackButton />  {/* Add the GoBackButton component */}
         </div>
     );
 };

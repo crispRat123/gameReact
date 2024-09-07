@@ -1,7 +1,7 @@
-// Home.js
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import '../styles/Home.css';
+import GoBackButton from './GoBackButton';
 
 const Home = ({ name }) => {
     const [showDisclaimer, setShowDisclaimer] = useState(true);
@@ -31,6 +31,8 @@ const Home = ({ name }) => {
                     </div>
                 </div>
             )}
+            <br></br>
+            <GoBackButton />  {/* Add the GoBackButton component */}
         </div>
     );
 };
