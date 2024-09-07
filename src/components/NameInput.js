@@ -12,7 +12,7 @@ const NameInput = ({ setName }) => {
         if (inputName.trim()) {
             localStorage.setItem('userName', inputName);
             setName(inputName);
-            navigate('/home');
+            navigate('/gameReact/home');
         }
     };
 

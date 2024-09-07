@@ -14,7 +14,7 @@ const Home = ({ name }) => {
         <div className="home">
             <h2>Welcome, {name}!</h2>
             <p>Are you ready to play the game?</p>
-            <Link to="/game" className="start-button">
+            <Link to="/gameReact/game" className="start-button">
                 Start the Game
             </Link>
 

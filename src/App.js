@@ -19,10 +19,10 @@ const App = () => {
     <div className="app">
       <Header />
       <Routes>
-        <Route path="/" element={<NameInput setName={setName} />} />
-        <Route path="/home" element={<Home name={name} />} />
-        <Route path="/game" element={<Game onTaskSelect={handleTaskSelection} />} />
-        <Route path="/result" element={<TaskResult selectedTask={selectedTask} />} />
+        <Route path="/gameReact" element={<NameInput setName={setName} />} />
+        <Route path="/gameReact/home" element={<Home name={name} />} />
+        <Route path="/gameReact/game" element={<Game onTaskSelect={handleTaskSelection} />} />
+        <Route path="/gameReact/result" element={<TaskResult selectedTask={selectedTask} />} />
       </Routes>
     </div>
   );

@@ -9,7 +9,7 @@ const TaskResult = () => {
     const navigate = useNavigate();
 
     const handleGoBack = () => {
-        navigate('/game');
+        navigate('/gameReact/game');
     };
 
     return (

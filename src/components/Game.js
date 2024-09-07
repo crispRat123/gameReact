@@ -10,7 +10,7 @@ const tasks = [
     "If you could give a nickname to me , what would it be and why ?",
     "Send me a selfie you’ve taken recently if you’re comfortable. It’s always nice to see different perspectives.",
     "What was your biggest fear as a kid, and are you still scared of it now?",
-    "I owe you your favourite food/snack/treat from your favourite place.",
+    "Sidhant owes you your favourite food/snack/treat from your favourite place.",
     "What is one moment in your life you would love to relive?",
     "What gift would you like to have on your birthday ?",
     "What is your favourite memory of us ?",
@@ -34,7 +34,7 @@ const Game = ({ name }) => {
             label: `Task ${index + 1}: ${task}`
         });
 
-        navigate('/result');
+        navigate('/gameReact/result');
     };
 
     return (
