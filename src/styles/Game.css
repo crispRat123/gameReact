@@ -1,0 +1,88 @@
+.game {
+    text-align: center;
+    padding: 20px;
+    font-family: 'Comic Sans MS', cursive, sans-serif;
+    color: #ff69b4;
+}
+
+h2 {
+    font-size: 1.8rem;
+    color: #ff69b4;
+    margin-bottom: 20px;
+}
+
+.task-options {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    justify-content: center;
+    padding: 20px;
+}
+
+/* Button Design */
+.task-button {
+    background-color: #ffc1e3;
+    /* Soft pink background */
+    color: black;
+    /* White text */
+    border: none;
+    padding: 15px 30px;
+    font-size: 1.2rem;
+    cursor: pointer;
+    border-radius: 20px;
+    /* Smooth, rounded corners */
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    box-shadow: 0 8px 16px rgba(255, 182, 193, 0.5);
+    /* Soft pink shadow */
+    width: 80px;
+    height: 80px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: 'Pacifico', cursive;
+    position: relative;
+    /* Fun and feminine font */
+}
+
+.task-button i {
+    position: absolute;
+    bottom: 8px;
+    right: 8px;
+    font-size: 0.8rem;
+    color: rgba(255, 255, 255, 0.7);
+}
+
+/* Button Hover and Focus Effects */
+.task-button:hover {
+    background-color: #ff8cb3;
+    /* Darker pink on hover */
+    transform: scale(1.1);
+    box-shadow: 0 12px 20px rgba(255, 105, 180, 0.5);
+    /* Brighter pink shadow on hover */
+}
+
+.task-button:focus {
+    outline: none;
+    box-shadow: 0 0 10px #ff69b4;
+}
+
+/* Center the last button (number 10) */
+.task-options button:nth-child(10) {
+    grid-column: 2 / 3;
+}
+
+/* Adding some animations */
+@keyframes shimmer {
+    0% {
+        box-shadow: 0 0 10px rgba(255, 182, 193, 0.5), 0 0 20px rgba(255, 182, 193, 0.2);
+    }
+
+    100% {
+        box-shadow: 0 0 20px rgba(255, 182, 193, 0.8), 0 0 30px rgba(255, 182, 193, 0.6);
+    }
+}
+
+.task-button:hover {
+    animation: shimmer 0.6s infinite alternate;
+    /* Shimmer effect on hover */
+}

@@ -1,0 +1,10 @@
+.app {
+    text-align: center;
+    background-color: #f8f1f5;
+    font-family: 'Arial', sans-serif;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}

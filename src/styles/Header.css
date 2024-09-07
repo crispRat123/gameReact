@@ -1,0 +1,13 @@
+.header {
+    background-color: #ff8c94;
+    padding: 20px;
+    color: white;
+    width: 100%;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.header h1 {
+    margin: 0;
+    font-size: 2rem;
+}
