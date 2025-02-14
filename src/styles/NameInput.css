@@ -1,35 +1,74 @@
-/* NameInput.css */
+/* Main container for the input component */
 .name-input {
-    text-align: center;
-    padding: 20px;
+    display: flex;
+    flex-direction: column; /* Stack elements vertically */
+    align-items: center; /* Center align all items */
+    padding: 40px; /* Increased padding for better spacing */
+    background-color: #f9f9f9; /* Light background color for contrast */
+    border-radius: 10px; /* Rounded corners */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+    width: 80%; /* Set a max width for the container */
+    margin: 0 auto; /* Center the container on the page */
 }
 
+/* Image container to hold the images */
+.image-container {
+    display: flex; /* Use flexbox for image container */
+    justify-content: space-between; /* Space out images to extremes */
+    width: 100%; /* Full width of the parent */
+    margin-bottom: 20px; /* Add space below images */
+}
+
+/* Image styles */
+.side-image {
+    width: 120px; /* Fixed width for images */
+    height: auto; /* Maintain aspect ratio */
+    margin: 0 15px; /* Add horizontal margin for spacing between images */
+    transition: transform 0.3s; /* Smooth transition for hover effect */
+}
+
+/* Image hover effect */
+.side-image:hover {
+    transform: scale(1.05); /* Slightly enlarge image on hover */
+}
+
+/* Heading style */
 .name-input h2 {
-    color: #ff69b4;
+    color: #ff69b4; /* Title color */
+    margin: 20px 0; /* Add space above and below the heading */
+    font-size: 24px; /* Larger font size for emphasis */
 }
 
+/* Form styling */
 .name-input form {
-    display: inline-block;
+    display: flex; /* Use flexbox for the form */
+    align-items: center; /* Center align items in the form */
     margin-top: 20px;
+    width: 100%; /* Full width for the form */
 }
 
+/* Input field styling */
 .name-input input {
-    padding: 10px;
-    font-size: 16px;
-    border: 1px solid #ff69b4;
-    border-radius: 5px;
-    margin-right: 10px;
+    padding: 12px; /* Increased padding for comfort */
+    font-size: 16px; /* Font size for input */
+    border: 1px solid #ff69b4; /* Border color */
+    border-radius: 5px; /* Rounded corners for input */
+    flex-grow: 1; /* Allow input to take available space */
+    margin-right: 10px; /* Space between input and button */
 }
 
+/* Button styling */
 .submit-button {
-    background-color: #ff69b4;
-    color: white;
-    padding: 10px 20px;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
+    background-color: #ff69b4; /* Button background color */
+    color: white; /* Button text color */
+    padding: 12px 20px; /* Padding for button */
+    border: none; /* Remove border */
+    border-radius: 5px; /* Rounded corners for button */
+    cursor: pointer; /* Pointer cursor on hover */
+    transition: background-color 0.3s; /* Smooth transition for hover effect */
 }
 
+/* Button hover effect */
 .submit-button:hover {
-    background-color: #ff1493;
+    background-color: #ff1493; /* Darker shade on hover */
 }

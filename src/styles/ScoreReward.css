@@ -1,0 +1,89 @@
+.score-reward {
+    padding: 40px;
+    text-align: center;
+    font-family: 'Poppins', sans-serif;
+    color: #333;
+    background-color: #f0f4f8; /* Light background for contrast */
+    border-radius: 10px; /* Rounded corners */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+}
+
+.score-reward h2 {
+    color: #ff69b4; /* Title color */
+    margin-bottom: 20px; /* Space below the title */
+}
+
+.score-reward ul {
+    list-style-position: inside; /* Align list items inside */
+    padding-left: 0; /* Remove default padding */
+}
+
+.score-reward li {
+    margin: 10px 0; /* Spacing between items */
+    font-size: 1.2rem; /* Font size for messages */
+    color: #555; /* Slightly darker color for better readability */
+}
+
+/* Finisher button styles */
+.finisher-button {
+    background-color: #ff69b4; /* Button background color */
+    color: white; /* Button text color */
+    padding: 10px 20px;
+    border: none;
+    border-radius: 8px;
+    font-size: 1.2rem; /* Font size for buttons */
+    cursor: pointer;
+    margin-top: 20px; /* Space above the button */
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.finisher-button:hover {
+    background-color: #ff1493; /* Darker shade on hover */
+    transform: scale(1.05);
+}
+
+/* Modal styles */
+.modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+}
+
+.modal-content {
+    background-color: white;
+    padding: 30px;
+    border-radius: 10px;
+    text-align: center;
+    width: 80%;
+    max-width: 500px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+}
+
+.ending-image {
+    max-width: 100%; /* Make sure the image is responsive */
+    height: auto; /* Maintain aspect ratio */
+    margin-bottom: 20px; /* Space below the image */
+}
+
+.modal-close-button {
+    background-color: #ff69b4; /* Button background color */
+    color: white; /* Button text color */
+    padding: 10px 20px;
+    border: none;
+    border-radius: 8px;
+    font-size: 1.2rem; /* Font size for buttons */
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.modal-close-button:hover {
+    background-color: #ff1493; /* Darker shade on hover */
+    transform: scale(1.05);
+}

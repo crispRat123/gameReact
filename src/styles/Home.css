@@ -1,15 +1,33 @@
+/* Main container for the home component */
 .home {
     text-align: center;
     padding: 40px;
     font-family: 'Poppins', sans-serif;
     color: #333;
+    background-color: #f0f4f8; /* Light background for contrast */
+    min-height: 100vh; /* Ensure full height coverage */
 }
 
-h2 {
-    font-size: 2.5rem;
-    color: #555;
+/* Heading style */
+h4 {
+    font-size: 2rem; /* Larger font size for emphasis */
+    color: #ff69b4; /* Use a consistent color */
+    margin-bottom: 20px; /* Space below the heading */
 }
 
+/* Unordered list without bullets */
+.no-bullets {
+    list-style-type: none; /* Remove the default bullet points */
+    padding-left: 0; /* Remove any left padding */
+    margin: 0; /* Remove default margin */
+}
+
+.no-bullets li {
+    margin-bottom: 10px; /* Spacing between items */
+    font-size: 1.2rem; /* Slightly larger font size for readability */
+}
+
+/* Start button styling */
 .start-button {
     background: linear-gradient(135deg, #f78ca0, #f9748f);
     color: white;
@@ -63,6 +81,7 @@ h2 {
     margin-bottom: 20px;
 }
 
+/* Modal button styling */
 .modal-button {
     background-color: #ff69b4;
     color: white;

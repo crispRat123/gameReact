@@ -3,7 +3,7 @@ import '../styles/Header.css';
 
 const Header = () => (
     <header className="header">
-        <h1>Welcome to the Game!</h1>
+        <h1>WELCOME TO THE BOOBYTRAP!</h1>
     </header>
 );
 

@@ -12,9 +12,18 @@ const Home = ({ name }) => {
 
     return (
         <div className="home">
-            <h2>Welcome, {name}!</h2>
-            <p>Are you ready to play the game?</p>
-            <Link to="/gameReact/game" className="start-button">
+            <h4>The Ultimate Love Challenge 🌹</h4>
+            <ul className="no-bullets">
+                <li>🎮 Game Rules:</li>
+                <li>Each round has questions and challenges.</li>
+                <li>Every correct answer earns points.</li>
+                <li>If you miss an answer, don’t worry—you’ll get a cute dare to win my heart again! ❤️</li>
+                <li>At the end, you’ll get a chance to win a million dollars, I’ll manifest that! 🎁</li>
+            </ul>
+
+            <hr />
+            <p>Ready to play? Let’s see how special you are to me—even from miles away!</p>
+            <Link to="/gameReact/round1" className="start-button">
                 Start the Game
             </Link>
 
@@ -22,17 +31,15 @@ const Home = ({ name }) => {
                 <div className="modal-overlay">
                     <div className="modal-content">
                         <h3>Disclaimer</h3>
-                        <p>
-                            The task you choose during the game has to be performed! Choose wisely 😊.
-                        </p>
+                        <p>You better get all the answers correct! We ain’t playing games here.</p>
                         <button className="modal-button" onClick={handleCloseModal}>
                             Got it!
                         </button>
                     </div>
                 </div>
             )}
-            <br></br>
-            <GoBackButton />  {/* Add the GoBackButton component */}
+
+            <GoBackButton /> {/* Add the GoBackButton component */}
         </div>
     );
 };

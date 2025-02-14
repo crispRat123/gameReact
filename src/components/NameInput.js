@@ -18,7 +18,12 @@ const NameInput = ({ setName }) => {
 
     return (
         <div className="name-input">
-            <h2>Welcome! Please enter your name:</h2>
+            <div className='image-container'>
+            <img src={`${process.env.PUBLIC_URL}/assets/samarth.jpg`} alt="Left" className="side-image left" />
+            <img src={`${process.env.PUBLIC_URL}/assets/tamanna.jpg`} alt="Right" className="side-image right" />
+            </div>
+            <h2>Please enter your name:</h2>
+            
             <form onSubmit={handleSubmit}>
                 <input
                     type="text"
